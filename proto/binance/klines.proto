@@ -16,4 +16,6 @@ message Kline {
 	int64 trade_num = 9;
 	string taker_buy_base_asset_volume = 10;
 	string taker_buy_quote_asset_volume = 11;
+
+	string symbol = 12;
 }
