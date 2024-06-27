@@ -6,7 +6,7 @@ option go_package = "github.com/veska-io/streams-proto/streams;eeventspb";
 
 message Event {
 	string event = 1;
-	uint64 timestamp = 2;
+	uint64 event_timestamp = 2;
 	
 	string exchange = 3;
 	string market = 4;
@@ -25,5 +25,12 @@ message Event {
 
 	optional double oi_open = 15;
 
-	optional double trades_count = 16;
+	optional int32 trades_count = 16;
+
+	optional int32 liquidations_sell_count = 17;
+	optional int32 liquidations_buy_count = 18;
+	optional double liquidations_sell_base_volume = 19;
+	optional double liquidations_buy_base_volume = 20;
+	optional double liquidations_sell_quot_volume = 21;
+	optional double liquidations_buy_quot_volume = 22;
 }
