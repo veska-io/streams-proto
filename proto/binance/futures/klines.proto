@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package binance;
+
+option go_package = "github.com/veska-io/streams-proto/binance;binancepb";
+
+message Kline {
+	int64 open_time = 1;
+	string open = 2;
+	string high = 3;
+	string low = 4;
+	string close = 5;
+	string volume = 6;
+	int64 close_time = 7;
+	string quot_asset_volume = 8;
+	int64 trade_num = 9;
+	string taker_buy_base_asset_volume = 10;
+	string taker_buy_quot_asset_volume = 11;
+
+	string symbol = 12;
+	string base = 13;
+	string quot = 14;
+}
