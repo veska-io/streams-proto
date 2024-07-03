@@ -5,19 +5,24 @@ package binance;
 option go_package = "github.com/veska-io/streams-proto/binance;binancepb";
 
 message Kline {
-	int64 open_time = 1;
-	string open = 2;
-	string high = 3;
-	string low = 4;
-	string close = 5;
-	string volume = 6;
-	int64 close_time = 7;
-	string quot_asset_volume = 8;
-	int64 trade_num = 9;
-	string taker_buy_base_asset_volume = 10;
-	string taker_buy_quot_asset_volume = 11;
+	string symbol = 1;
+	string base = 2;
+	string quot = 3;
 
-	string symbol = 12;
-	string base = 13;
-	string quot = 14;
+	uint64 kline_timestamp = 4;
+	uint64 open_time = 5;
+	uint64 close_time = 6;
+
+	string open = 7;
+	string high = 8;
+	string low = 9;
+	string close = 10;
+
+	string volume = 11;
+
+	uint64 trade_num = 12;
+
+	string quot_asset_volume = 13;
+	string taker_buy_base_asset_volume = 14;
+	string taker_buy_quot_asset_volume = 15;
 }
