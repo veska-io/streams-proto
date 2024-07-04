@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package binance;
+
+option go_package = "github.com/veska-io/streams-proto/binance;binancepb";
+
+message OpenInterest {
+	string symbol = 1;
+	string base = 2;
+	string quot = 3;
+
+	uint64 oi_timestamp = 4;
+	string open_interest = 5;
+}
