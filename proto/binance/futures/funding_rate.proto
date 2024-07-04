@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package binance;
+
+option go_package = "github.com/veska-io/streams-proto/binance;binancepb";
+
+message FundingRate{
+	string symbol = 1;
+	string base = 2;
+	string quot = 3;
+
+	uint64 funding_timestamp = 4;
+	string rate = 5;
+	string mark_price = 6;
+}
